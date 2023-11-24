@@ -13,4 +13,4 @@ randSleep = random.randint(1,1200)
 time.sleep(randSleep)
 
 #Set relay to "on"
-GPIO.output(18,GPIO.HIGH) # Toggle relay on.
+GPIO.output(18,GPIO.HIGH)
