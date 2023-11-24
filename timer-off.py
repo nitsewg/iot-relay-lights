@@ -12,5 +12,5 @@ GPIO.setup(18,GPIO.OUT)
 randSleep = random.randint(1,1200)
 time.sleep(randSleep)
 
-#Set relay to "on"
+#Set relay to "off"
 GPIO.output(18,GPIO.LOW)

@@ -10,7 +10,7 @@ GPIO.setup(18,GPIO.OUT)
 print("CTRL+C to stop testing")
 
 while 1 == 1:
-    GPIO.output(18,GPIO.HIGH) # Toggle relay on.
+    GPIO.output(18,GPIO.HIGH) # Toggle relay off.
     time.sleep(5)
     GPIO.output(18,GPIO.LOW) # Toggle relay off.
     time.sleep(5)
