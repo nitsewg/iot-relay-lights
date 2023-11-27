@@ -13,7 +13,8 @@ class Handler(http.server.SimpleHTTPRequestHandler):
        #this code execute when a GET request happen, then you have to check if the request happenned because the user pressed the button
         if self.path.find("turnlampon=true") != -1:
             #print("Lamp on")
-            GPIO.output(18,GPIO.HIGH)
+            #GPIO.output(18,GPIO.HIGH)
+            exec(open("turnon.py").read())
         else:
             #print("Lamp off")
             GPIO.output(18,GPIO.LOW)
