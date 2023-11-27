@@ -2,10 +2,6 @@ import http.server
 import socketserver
 import RPi.GPIO as GPIO
 
-GPIO.setmode(GPIO.BCM)
-GPIO.setwarnings(False)
-GPIO.setup(18,GPIO.OUT)
-
 #here you create a new handler, you had a new way to handle get request
 class Handler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
@@ -17,7 +13,8 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             exec(open("turnon.py").read())
         else:
             #print("Lamp off")
-            GPIO.output(18,GPIO.LOW)
+            #GPIO.output(18,GPIO.LOW)
+            exec(open("turnoff.py").read())
         return super().do_GET()
 
 
