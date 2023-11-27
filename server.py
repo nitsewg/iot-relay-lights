@@ -5,7 +5,6 @@ import RPi.GPIO as GPIO
 #here you create a new handler, you had a new way to handle get request
 class Handler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
-        GPIO.cleanup()
         GPIO.setmode(GPIO.BCM)
         GPIO.setwarnings(False)
         GPIO.setup(18,GPIO.OUT)
