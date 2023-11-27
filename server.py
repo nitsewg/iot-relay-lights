@@ -10,11 +10,11 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         if self.path.find("turnlampon=true") != -1:
             #print("Lamp on")
             #GPIO.output(18,GPIO.HIGH)
-            exec(open("turnon.py").read())
+            exec(open("/home/pi/iot-relay-lights/turnon.py").read())
         else:
             #print("Lamp off")
             #GPIO.output(18,GPIO.LOW)
-            exec(open("turnoff.py").read())
+            exec(open("/home/pi/iot-relay-lights/turnoff.py").read())
         return super().do_GET()
 
 
